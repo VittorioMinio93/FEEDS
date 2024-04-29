@@ -8,12 +8,17 @@ FEEDS assesses the generalization capability of an alert system, i.e., the abili
 - FTA (Fraction Time Alert): indicates the fraction of total time during which the system is in an alert state. A high FTA could indicate an excessive sensitivity of the system, with a period of alarm persistence that would degrade the system's reliability (paradoxically, an FTA of 1, i.e., a system always on alert, would identify all target events with only one alert). The lower this fraction, the better the alert system.
 
 These parameters provide a detailed assessment of the system's performance, allowing for a better understanding of its effectiveness and reliability in detecting specific events such as paroxysms. The distinctive aspect of FEEDS is the application of Monte Carlo cross-validation to an alert system, representing a significant innovation in the field of volcanic prediction.
-The evaluation process of an ED system is complex and involves several phases. These include:
+The evaluation process of an ED system is complex and involves several phases (**Figure 1**). These include:
 
 - Data collection and preparation. FEEDS performs an automatic signal quality analysis to determine the most suitable periods for subsequent phases.  
 - Partitioning of data into training and testing sets. Once the dataset and analysis period are determined, FEEDS proceeds by randomly dividing the entire period into segments of variable length. These periods are randomly chosen to compose the training set, representing 70% of the dataset. Instead, the remaining 30% is reserved for testing the trained system. Furthermore, during this phase, FEEDS ensures that the target events are distributed differently between the two sets.   
 - Implementation and optimization of the alert model. FEEDS involves the creation of an Early detection model. At this stage, the system determines the relationship between the data that allows obtaining the maximum possible number of true positives (100% success rate) and the minimum possible number of false positives (0% false alarms).  
-- evaluation of model performance. During the final phase, FEEDS utilizes the ED model derived from the training process to conduct a pseudo real-time simulation on the test set, calculating how many times alarms are activated or not. Specifically, various statistics such as TPR, FDR, LT, and FTA are estimated based on these results. Using the Monte Carlo cross-validation method (Picard and Cook, 1984), the entire procedure is repeated a certain number N of times, obtaining information about the distributions of the performance parameters of the warning model for independent sets of data. 
+- evaluation of model performance. During the final phase, FEEDS utilizes the ED model derived from the training process to conduct a pseudo real-time simulation on the test set, calculating how many times alarms are activated or not. Specifically, various statistics such as TPR, FDR, LT, and FTA are estimated based on these results. Using the Monte Carlo cross-validation method (Picard and Cook, 1984), the entire procedure is repeated a certain number N of times, obtaining information about the distributions of the performance parameters of the warning model for independent sets of data.
+
+  
+  ![FEEDS_framework](https://github.com/VittorioMinio93/FEEDS/assets/81485574/83b75831-0465-4576-8306-c29c7d4356f7)
+**Figure 1. Schematic representation of the main processes used to evaluate the performance of a generic alert system. At the top right of the figure, Python-implemented functions are listed and used to group the main processes: data management (blue), alert model implementation (yellow), and model performance evaluation (green).** 
+
 
 In conclusion, the application of Monte Carlo cross-validation to an ED system represents a significant innovation in the field of volcanic prediction. This approach provides a probabilistic estimate of possible scenarios, allowing for a more comprehensive and reliable risk assessment. 
 FEEDS allows users to adapt the alert system to different types of data and models, both through a traditional threshold-based approach and the use of artificial intelligence techniques.
@@ -27,10 +32,10 @@ FFEDS can be run on any operation system with Python from Release 3.10.9 In addi
  
 # Citation 
 If you use this code for your work, please cite the following DOI:
--	[https://doi.org/](https://doi.org/10.5281/zenodo.11082459)
+-	https://doi.org/10.5281/zenodo.11082459
 
 # Contact
-You can send an email to vittorio.minio@ingv.it to report suggestions, comments and bugs.
+You can send an email to **vittorio.minio@ingv.it** to report suggestions, comments and bugs.
 
 # References
 - Cannavò et al., 2017. A multivariate probabilistic graphical model for real-time volcano monitoring on Mount Etna, Journal of Geophysical Research: Solid Earth.  https://doi.org/10.1002/2016JB013512.
