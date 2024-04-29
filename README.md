@@ -27,7 +27,7 @@ FFEDS can be run on any operation system with Python from Release 3.10.9 In addi
  
 # Citation 
 If you use this code for your work, please cite the following DOI:
--	https://doi.org/
+-	[https://doi.org/](https://doi.org/10.5281/zenodo.11082459)
 
 # Contact
 You can send an email to vittorio.minio@ingv.it to report suggestions, comments and bugs.
