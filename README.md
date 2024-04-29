@@ -1,4 +1,4 @@
-# FFEDS: Framework for Evaluation of Early Detection Systems
+# FEEDS: Framework for Evaluation of Early Detection Systems
 FEEDS (Framework for Evaluation of Early Detection Systems) has been developed for the assessment of the generalization capability of a generic Early Detection (ED) system (e.g., Ripepe et al., 2021), which refers to the ability to provide reliable alarms for target events using data different from those used to develop the system. The framework consists of a Python package comprising functions and classes dedicated to the management of geophysical data, simulation in pseudo real-time (i.e., real-time simulation on previously acquired data), and the evaluation of the performance of an alert model. 
 FEEDS assesses the generalization capability of an alert system, i.e., the ability to provide reliable alerts for target events using data different from those with which the system was developed. This evaluation can be quantified through several statistics on predictive parameters (e.g., Cannavò et al., 2017):
 
