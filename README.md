@@ -24,7 +24,7 @@ In conclusion, the application of Monte Carlo cross-validation to an ED system r
 FEEDS allows users to adapt the alert system to different types of data and models, both through a traditional threshold-based approach and the use of artificial intelligence techniques.
 
 # Requirements
-FFEDS can be run on any operation system with Python from Release 3.10.9 In addition, you need to have the following packages installed: 
+FEEDS can be run on any operation system with Python from Release 3.10.9 In addition, you need to have the following packages installed: 
 
 -	pandas, version 1.5.3 or later.
 -	numpy, version 1.24.2 or later.
